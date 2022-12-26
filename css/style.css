@@ -35,6 +35,12 @@ h2 {
     font-size: 1.125em;
 }
 
+i.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /** Design **/
 
 body {
@@ -139,7 +145,7 @@ section.search form .form-group input::placeholder {
     color: black;
     font-weight: 700;
 }
-section.search form .form-group label figure {
+section.search form .form-group label i.icon {
     width: 1em;
     height: 1em;
     margin: 0.875em;
@@ -177,8 +183,8 @@ section.filters .filters-container .filter label {
     align-items: center;
     font-weight: 700;
 }
-section.filters .filters-container .filter label figure {
-    height: 1.375em;
+section.filters .filters-container .filter label i.icon {
+    color: var(--tonic);
 }
 section.filters .filters-container .filter input {
     position: absolute;
@@ -196,7 +202,7 @@ section.filters .filters-container .filter:hover {
     column-gap: .5em;
     font-size: 1em;
 }
-.informations figure {
+.informations i.icon {
     display: flex;
     padding: .5em;
     border-radius: 9999px;
@@ -205,4 +211,5 @@ section.filters .filters-container .filter:hover {
     border: solid 2px var(--gray);
     width: 0.8em;
     height: 0.8em;
+    color: var(--tonic);
 }
