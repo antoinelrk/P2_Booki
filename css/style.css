@@ -59,6 +59,16 @@ body {
     min-height: 100vh;
 }
 
+section {
+    display: flex;
+    width: 100%;
+    margin: 1.5em 0;
+}
+section.col {
+    flex-direction: column;
+}
+
+/** Header & Nav **/
 header {
     display: flex;
     height: auto;
@@ -70,7 +80,6 @@ header a.return-to-home {
 header a.return-to-home figure {
     height: 1.1875em;
 }
-
 nav {
     display: flex;
     height: 100%;
@@ -108,14 +117,6 @@ nav ul li a:after {
     background-color: var(--tonic);
 }
 
-section {
-    display: flex;
-    width: 100%;
-    margin: 1.5em 0;
-}
-section.col {
-    flex-direction: column;
-}
 /** Section: Search **/
 section.search p {
     margin-top: .5em;
