@@ -340,3 +340,36 @@ section.accommodation-popular-container .popular .popular-body .element .element
 section.accommodation-popular-container .popular .popular-body .element .element-description .stars i:last-child {
     color: var(--gray);
 }
+/* Activity in Marseille */
+section.activity {
+    width: 100%;
+    row-gap: var(--gap);
+}
+
+section.activity .elements-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, calc((100% - (var(--gap) * 3)) / 4));
+    column-gap: var(--gap);
+    width: 100%;
+}
+section.activity .elements-wrapper .element {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1em;
+    filter: var(--drop-shadow);
+    background-color: var(--white);
+}
+
+section.activity .elements-wrapper .element img {
+    display: flex;
+    object-fit: cover;
+    height: 100%;
+}
+
+section.activity .elements-wrapper .element p {
+    margin: 1.25em;
+    font-size: 1em;
+    font-weight: 700;
+}
