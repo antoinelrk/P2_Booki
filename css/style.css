@@ -345,7 +345,6 @@ section.activity {
     width: 100%;
     row-gap: var(--gap);
 }
-
 section.activity .elements-wrapper {
     display: grid;
     grid-template-columns: repeat(4, calc((100% - (var(--gap) * 3)) / 4));
@@ -361,15 +360,37 @@ section.activity .elements-wrapper .element {
     filter: var(--drop-shadow);
     background-color: var(--white);
 }
-
 section.activity .elements-wrapper .element img {
     display: flex;
     object-fit: cover;
     height: 100%;
 }
-
 section.activity .elements-wrapper .element p {
     margin: 1.25em;
     font-size: 1em;
     font-weight: 700;
+}
+/* Footer */
+footer {
+    display: grid;
+    margin-top: 2.25em;
+    grid-template-columns: repeat(3, calc(100% / 3));
+    padding: 2.8125em 4.375em;
+    background-color: var(--gray);
+}
+footer .element {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+footer .element ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25em;
+    row-gap: .75em;
+}
+
+footer .element ul li a {
+    font-size: 1em;
 }
