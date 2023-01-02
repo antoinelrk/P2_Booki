@@ -227,11 +227,11 @@ section.accommodation-popular-container {
 section.accommodation-popular-container .accommodation {
     display: flex;
     flex-direction: column;
-    padding: 1.5em 2em;
+    padding: 2.5625em 2.3125em;
     width: 100%;
     background-color: var(--gray);
     border-radius: 1.5em;
-    row-gap: 1em;
+    row-gap: 1.625em;
 }
 section.accommodation-popular-container .accommodation .accommodation-wrapper {
     display: grid;
@@ -240,7 +240,6 @@ section.accommodation-popular-container .accommodation .accommodation-wrapper {
     row-gap: var(--gap);
     column-gap: var(--gap);
 }
-
 section.accommodation-popular-container .accommodation .accommodation-wrapper .element {
     display: flex;
     flex-direction: column;
@@ -278,15 +277,20 @@ section.accommodation-popular-container .accommodation .accommodation-wrapper .e
 section.accommodation-popular-container .accommodation .accommodation-wrapper .element .element-description .stars i:last-child {
     color: var(--gray);
 }
+section.accommodation-popular-container .accommodation a.show-more {
+    margin-top: 0.875em;
+    font-size: 1.125em;
+    font-weight: 700;
+}
 /* Popular */
 section.accommodation-popular-container .popular {
     display: flex;
     flex-direction: column;
-    padding: 1.5em 2em;
+    padding: 2.5625em 2.3125em;
     width: 30%;
     background-color: var(--gray);
     border-radius: 1.5em;
-    row-gap: 1em;
+    row-gap: 1.625em;
 }
 section.accommodation-popular-container .popular-head {
     display: flex;
