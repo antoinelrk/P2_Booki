@@ -227,11 +227,11 @@ section.accommodation-popular-container {
 section.accommodation-popular-container .accommodation {
     display: flex;
     flex-direction: column;
-    padding: 1.5em 2em;
+    padding: 2.5625em 2.3125em;
     width: 100%;
     background-color: var(--gray);
     border-radius: 1.5em;
-    row-gap: 1em;
+    row-gap: 1.625em;
 }
 section.accommodation-popular-container .accommodation .accommodation-wrapper {
     display: grid;
@@ -240,7 +240,6 @@ section.accommodation-popular-container .accommodation .accommodation-wrapper {
     row-gap: var(--gap);
     column-gap: var(--gap);
 }
-
 section.accommodation-popular-container .accommodation .accommodation-wrapper .element {
     display: flex;
     flex-direction: column;
@@ -278,15 +277,20 @@ section.accommodation-popular-container .accommodation .accommodation-wrapper .e
 section.accommodation-popular-container .accommodation .accommodation-wrapper .element .element-description .stars i:last-child {
     color: var(--gray);
 }
+section.accommodation-popular-container .accommodation a.show-more {
+    margin-top: 0.875em;
+    font-size: 1.125em;
+    font-weight: 700;
+}
 /* Popular */
 section.accommodation-popular-container .popular {
     display: flex;
     flex-direction: column;
-    padding: 1.5em 2em;
+    padding: 2.5625em 2.3125em;
     width: 30%;
     background-color: var(--gray);
     border-radius: 1.5em;
-    row-gap: 1em;
+    row-gap: 1.625em;
 }
 section.accommodation-popular-container .popular-head {
     display: flex;
@@ -335,4 +339,58 @@ section.accommodation-popular-container .popular .popular-body .element .element
 }
 section.accommodation-popular-container .popular .popular-body .element .element-description .stars i:last-child {
     color: var(--gray);
+}
+/* Activity in Marseille */
+section.activity {
+    width: 100%;
+    row-gap: var(--gap);
+}
+section.activity .elements-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, calc((100% - (var(--gap) * 3)) / 4));
+    column-gap: var(--gap);
+    width: 100%;
+}
+section.activity .elements-wrapper .element {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1em;
+    filter: var(--drop-shadow);
+    background-color: var(--white);
+}
+section.activity .elements-wrapper .element img {
+    display: flex;
+    object-fit: cover;
+    height: 100%;
+}
+section.activity .elements-wrapper .element p {
+    margin: 1.25em;
+    font-size: 1em;
+    font-weight: 700;
+}
+/* Footer */
+footer {
+    display: grid;
+    margin-top: 2.25em;
+    grid-template-columns: repeat(3, calc(100% / 3));
+    padding: 2.8125em 4.375em;
+    background-color: var(--gray);
+}
+footer .element {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+footer .element ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25em;
+    row-gap: .75em;
+}
+
+footer .element ul li a {
+    font-size: 1em;
 }
