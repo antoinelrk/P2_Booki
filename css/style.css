@@ -319,24 +319,8 @@ section.accommodation-popular-container .popular .popular-body .card img {
     aspect-ratio: 1 / 1;
     height: 8em;
 }
-section.accommodation-popular-container .popular .popular-body .element .element-description {
-    display: flex;
-    flex-direction: column;
-    row-gap: .5em;
-    padding: 1em;
-}
-section.accommodation-popular-container .popular .popular-body .element .element-description p {
-    font-size: .9375em;
-}
-section.accommodation-popular-container .popular .popular-body .element .element-description .stars {
-    margin-top: auto;
-}
-section.accommodation-popular-container .popular .popular-body .element .element-description .stars i {
-    color: var(--tonic);
-    font-size: 1em;
-}
-section.accommodation-popular-container .popular .popular-body .element .element-description .stars i:last-child {
-    color: var(--gray);
+section.accommodation-popular-container .popular .popular-body .card .card-informations {
+    height: auto;
 }
 /* Activity in Marseille */
 section.activity {
@@ -361,6 +345,7 @@ section.activity .elements-wrapper .element {
 section.activity .elements-wrapper .element img {
     display: flex;
     object-fit: cover;
+    aspect-ratio: .5 / .7;
     height: 100%;
 }
 section.activity .elements-wrapper .element p {
