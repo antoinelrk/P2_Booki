@@ -11,8 +11,8 @@
     --gap: 2em;
     --drop-shadow: drop-shadow(6px 6px 12px #00000022);
     --desktop: 1440px;
-    --mobile: 992px;
     --tablet: 992px;
+    --mobile: 840px;
 }
 
 * {
@@ -46,7 +46,6 @@ i.icon {
     justify-content: center;
     align-items: center;
 }
-
 /** Design **/
 body {
     display: flex;
@@ -89,6 +88,7 @@ section.col {
     width: auto;
     object-fit: cover;
     aspect-ratio: 1 / .5;
+    height: 100%;
 }
 .card .card-informations {
     display: flex;
@@ -102,6 +102,7 @@ section.col {
 }
 .card .card-informations .stars {
     margin-top: 1em;
+    /* font-size: 1em; */
 }
 .card .card-informations .stars i {
     color: var(--tonic);
@@ -376,4 +377,109 @@ footer .element ul {
 
 footer .element ul li a {
     font-size: 1em;
+}
+
+/** Responsive **/
+/** Desktop (-4k) **/
+@media screen and (max-width: 1440px){
+    section.accommodation-popular-container {
+        flex-direction: column;
+        row-gap: 2em;
+    }
+    section.accommodation-popular-container .accommodation {
+        width: auto;
+    }
+    section.accommodation-popular-container .popular {
+        width: auto;
+    }
+    section.accommodation-popular-container .popular .popular-body {
+        display: grid;
+        grid-template-columns: repeat(3, calc((100% - (1.5em * 2)) / 3));
+        width: auto;
+        row-gap: 1.5em;
+        column-gap: 1.5em;
+    }
+    section.accommodation-popular-container .popular .popular-body .card img {
+        aspect-ratio: auto;
+        width: 6.625em;
+        height: 100%;
+    }
+    section.accommodation-popular-container .popular .popular-body .card .card-informations {
+        width: auto;
+    }
+}
+
+/** Desktop to Horizontal Tablet **/
+@media screen and (max-width: 1260px) {
+    .card {
+        font-size: .875em;
+    }
+    .card .card-informations p {
+        font-size: .75em;
+    }
+    .card .card-informations .stars {
+        font-size: 1em;
+    }
+}
+/** Vertical Tablet to Mobile **/
+@media screen and (max-width: 992px) {
+    .card .card-informations h2 {
+        font-size: .8125em;
+    }
+    .card .card-informations .stars {
+        font-size: .75em;
+    }
+}
+/** Mobile **/
+@media screen and (max-width: 840px) {
+    #app {
+        padding: 0;
+        width: 100%;
+    }
+    section {
+        /* margin: 0; */
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+    header a.return-to-home {
+        align-items: center;
+    }
+    header a.return-to-home img {
+        height: 1.8em;
+    }
+    nav {
+        height: calc(2.75em * 2);
+        width: 100%;
+    }
+    nav ul {
+        width: 100%;
+        height: 100%;
+    }
+    nav ul li {
+        width: 100%;
+    }
+    nav ul li a {
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+    }
+    nav ul li a:before {    
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 0.2em;
+        background-color: var(--gray);
+    }
+    nav ul li a:after {
+        opacity: 0;
+        height: 0.2em;
+        bottom: 0;
+        top: auto;
+    }
 }
