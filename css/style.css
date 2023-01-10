@@ -447,7 +447,7 @@ body #app footer .element ul li a {
 
 /* Media queries here */
 /* Tablet */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
     body #app {
         padding: 0 var(--app-padding);
         row-gap: var(--section-padding);
