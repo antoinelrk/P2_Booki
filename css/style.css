@@ -78,30 +78,30 @@ body #app {
 body #app header {
     display: flex;
     height: auto;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 body #app header a.return-to-home {
-    margin: 2.75em 0
+    margin: 2.75em 0;
 }
 
 body #app header a.return-to-home img {
-    height: 1.3em
+    height: 1.3em;
 }
 
 body #app header nav {
     display: flex;
-    height: 100%
+    height: 100%;
 }
 
 body #app header nav ul {
     display: flex;
-    height: 100%
+    height: 100%;
 }
 
 body #app header nav ul li {
     display: flex;
-    height: 100%
+    height: 100%;
 }
 
 body #app header nav ul li a.nav-link {
@@ -115,17 +115,17 @@ body #app header nav ul li a.nav-link {
 }
 
 body #app header nav ul li a.nav-link:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     width: 100%;
     height: .125em;
     opacity: 0;
-    background-color: var(--tonic)
+    background-color: var(--tonic);
 }
 
 body #app header nav ul li a.nav-link:hover {
-    color: var(--tonic)
+    color: var(--tonic);
 }
 
 body #app header nav ul li a.nav-link:hover:after {
@@ -847,7 +847,7 @@ body #app footer .element ul li a {
 }
 
 /* Mobile */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 992px) {
     :root {
         --drop-shadow: drop-shadow(0 3px 6px #00000022);
     }
@@ -858,74 +858,50 @@ body #app footer .element ul li a {
 
     body #app header {
         display: flex;
-        flex-direction: column
+        flex-direction: column;
     }
 
     body #app header a.return-to-home {
         display: flex;
-        margin: 1.3em auto
+        margin: 1.3em auto;
     }
 
     body #app header a.return-to-home img {
         display: flex;
-        height: 1.4em
+        height: 1.4em;
     }
 
     body #app header nav {
-        display: flex;
-        height: 4em
+        height: 4em;
     }
 
     body #app header nav ul {
-        display: flex;
         width: 100%;
-        height: 100%
     }
 
     body #app header nav ul li {
-        display: flex;
         width: 50%;
-        height: 100%
     }
 
     body #app header nav ul li a.nav-link {
         position: relative;
-        display: flex;
-        padding: 0 2em;
-        justify-content: center;
-        align-items: center;
         width: 100%;
-        height: 100%;
-        font-weight: 500;
-        font-size: 1em
+        font-size: 1em;
     }
 
     body #app header nav ul li a.nav-link:before {
-        content: "";
+        content: '';
         position: absolute;
         bottom: 0;
         width: 100%;
         height: .125em;
         opacity: 1;
-        background-color: var(--gray)
+        background-color: var(--gray);
     }
 
     body #app header nav ul li a.nav-link:after {
-        content: "";
-        position: absolute;
+        top: revert;
         bottom: 0;
-        width: 100%;
-        height: .125em;
-        opacity: 0;
-        background-color: var(--tonic)
-    }
-
-    body #app header nav ul li a.nav-link:hover {
-        color: var(--tonic)
-    }
-
-    body #app header nav ul li a.nav-link:hover:after {
-        opacity: 1
     }
 
     body #app section {
@@ -1153,7 +1129,7 @@ body #app footer .element ul li a {
     }
 
     body #app section.activity {
-        padding: 2.5em 1.25em;
+        padding: 2.5em 1.25em 0 1.25em;
         width: auto;
     }
 
