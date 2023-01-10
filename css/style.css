@@ -36,7 +36,7 @@ img {
     --gap: 2em;
     --drop-shadow: drop-shadow(6px 6px 12px #00000022);
     --app-padding: 3.4375em;
-    --section-padding: 1.5em;
+    --section-padding: 2em;
     --desktop: 1440px;
     --tablet: 992px;
     --mobile: 840px
@@ -56,453 +56,409 @@ i.icon {
     align-items: center
 }
 
-/* Media queries here */
-/* Mobile */
-@media screen and (max-width: 1024px) {
-    body {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        background-color: #fff;
-        justify-content: center;
-        font-size: 16px
-    }
-
-    body #app {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        min-height: 100vh
-    }
-
-    body #app header {
-        display: flex;
-        flex-direction: column
-    }
-
-    body #app header a.return-to-home {
-        display: flex;
-        margin: 1.3em auto
-    }
-
-    body #app header a.return-to-home img {
-        display: flex;
-        height: 1.4em
-    }
-
-    body #app header nav {
-        display: flex;
-        height: 4em
-    }
-
-    body #app header nav ul {
-        display: flex;
-        width: 100%;
-        height: 100%
-    }
-
-    body #app header nav ul li {
-        display: flex;
-        width: 50%;
-        height: 100%
-    }
-
-    body #app header nav ul li a.nav-link {
-        position: relative;
-        display: flex;
-        padding: 0 2em;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        font-weight: 500;
-        font-size: 1em
-    }
-
-    body #app header nav ul li a.nav-link:before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: .125em;
-        opacity: 1;
-        background-color: var(--gray)
-    }
-
-    body #app header nav ul li a.nav-link:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: .125em;
-        opacity: 0;
-        background-color: var(--tonic)
-    }
-
-    body #app header nav ul li a.nav-link:hover {
-        color: var(--tonic)
-    }
-
-    body #app header nav ul li a.nav-link:hover:after {
-        opacity: 1
-    }
-
-    body #app section {
-        display: flex;
-        width: 100%
-    }
-
-    body #app section .card {
-        display: flex;
-        border-radius: var(--gap);
-        background-color: var(--white);
-        border-radius: 1em;
-        filter: var(--drop-shadow);
-        border: solid .3125em var(--white);
-        overflow: hidden
-    }
-
-    body #app section .card img {
-        width: auto;
-        object-fit: cover;
-        aspect-ratio: 1/.5;
-        height: 100%
-    }
-
-    body #app section .card .card-informations {
-        display: flex;
-        flex-direction: column;
-        margin: .5em 1em;
-        height: 100%
-    }
-
-    body #app section .card .card-informations p {
-        margin: .75em 0 auto;
-        font-size: .875em
-    }
-
-    body #app section .card .card-informations .stars {
-        margin-top: 1em
-    }
-
-    body #app section .card .card-informations .stars i {
-        color: var(--tonic)
-    }
-
-    body #app section .card .card-informations .stars i:last-child {
-        color: var(--gray)
-    }
-
-    body #app section.search {
-        flex-direction: column;
-        padding: 2em 1.25em 0
-    }
-
-    body #app section.search h1 {
-        display: flex;
-        margin-right: 3em;
-        font-size: 1.375em
-    }
-
-    body #app section.search p {
-        margin-top: .5em
-    }
-
-    body #app section.search form {
-        display: flex;
-        margin-top: 1.25em;
-        width: calc(100% - 3em)
-    }
-
-    body #app section.search form .form-group {
-        display: flex;
-        width: auto;
-        border-radius: 1em;
-        overflow: hidden;
-        width: 100%
-    }
-
-    body #app section.search form .form-group label {
-        background-color: var(--gray)
-    }
-
-    body #app section.search form .form-group label i.icon {
-        width: 1em;
-        height: 1em;
-        margin: .875em
-    }
-
-    body #app section.search form .form-group input {
-        border: none;
-        border-top: solid 1px var(--gray);
-        border-bottom: solid 1px var(--gray);
-        outline: none;
-        padding: 0 1em;
-        font-size: 1em;
-        width: 100%
-    }
-
-    body #app section.search form .form-group input::placeholder {
-        color: #000;
-        font-weight: 700
-    }
-
-    body #app section.search form .form-group button {
-        padding: 0 1em;
-        background-color: var(--tonic);
-        color: #fff;
-        cursor: pointer;
-        font-size: 1em;
-        font-weight: 700
-    }
-
-    body #app section.search form .form-group button i.icon {
-        display: flex
-    }
-
-    body #app section.search form .form-group button span {
-        display: none
-    }
-
-    body #app section.filters {
-        display: flex;
-        flex-direction: column;
-        padding: 2em 1.25em 0;
-        width: auto;
-        row-gap: 1em
-    }
-
-    body #app section.filters h2 {
-        font-size: 1.2em
-    }
-
-    body #app section.filters .filters-container {
-        display: grid;
-        grid-template-columns: repeat(2, calc((100% - (var(--gap) + 4px)) / 2));
-        width: auto;
-        row-gap: var(--gap);
-        column-gap: var(--gap);
-        row-gap: 1em
-    }
-
-    body #app section.filters .filters-container .filter {
-        display: flex;
-        border-radius: 9999px;
-        border: solid 2px var(--gray-border);
-        width: 100%
-    }
-
-    body #app section.filters .filters-container .filter label {
-        display: flex;
-        padding: .8125em 1.25em;
-        cursor: pointer;
-        column-gap: .625em;
-        align-items: center;
-        font-weight: 700;
-        font-size: .8125em
-    }
-
-    body #app section.filters .filters-container .filter label i.icon {
-        color: var(--tonic)
-    }
-
-    body #app section.filters .filters-container .filter input {
-        position: absolute;
-        display: none;
-        width: 40px;
-        height: 40px
-    }
-
-    body #app section.filters .filters-container .filter:hover {
-        background-color: var(--tonic-hovered)
-    }
-
-    body #app section.informations {
-        display: flex;
-        padding: 2em 1.25em 0;
-        width: calc(100% - 2.5em);
-        align-items: center;
-        column-gap: .5em;
-        font-size: 1em
-    }
-
-    body #app section.informations i.icon {
-        display: flex;
-        padding: .5em;
-        border-radius: 9999px;
-        justify-content: center;
-        align-items: center;
-        border: solid 2px var(--gray);
-        aspect-ratio: 1/1;
-        width: .5em;
-        height: .5em;
-        color: var(--tonic)
-    }
-
-    body #app section.accommodations-populars {
-        display: flex;
-        flex-wrap: wrap-reverse;
-        padding: 2.3125em 0;
-        row-gap: var(--gap);
-        width: 100%
-    }
-
-    body #app section.accommodations-populars .accommodations {
-        display: flex;
-        flex-direction: column;
-        padding: 0 2.3125em;
-        width: auto;
-        border-radius: 1.5em;
-        row-gap: 1.625em
-    }
-
-    body #app section.accommodations-populars .accommodations h1 {
-        font-size: 1.25em
-    }
-
-    body #app section.accommodations-populars .accommodations .accommodation-wrapper {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        row-gap: 1em
-    }
-
-    body #app section.accommodations-populars .accommodations .accommodation-wrapper .card {
-        flex-direction: column
-    }
-
-    body #app section.accommodations-populars .accommodations .accommodation-wrapper .card img {
-        width: 100%;
-        aspect-ratio: 1/.4
-    }
-
-    body #app section.accommodations-populars .accommodations a.show-more {
-        margin-top: .875em;
-        font-size: 1.125em;
-        font-weight: 700
-    }
-
-    body #app section.accommodations-populars .populars {
-        display: flex;
-        flex-direction: column;
-        padding: 2.5625em 1.8em;
-        width: 100%;
-        background-color: var(--gray);
-        row-gap: 1.625em
-    }
-
-    body #app section.accommodations-populars .populars .popular-head {
-        display: flex;
-        row-gap: 1em;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center
-    }
-
-    body #app section.accommodations-populars .populars .popular-head a {
-        color: var(--tonic);
-        font-size: 1.125em
-    }
-
-    body #app section.accommodations-populars .populars .popular-body {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        row-gap: 1em
-    }
-
-    body #app section.accommodations-populars .populars .popular-body .card {
-        flex-direction: row;
-        border-radius: 1.5em
-    }
-
-    body #app section.accommodations-populars .populars .popular-body .card img {
-        width: 6em;
-        aspect-ratio: 1/1
-    }
-
-    body #app section.accommodations-populars .populars .popular-body .card .card-informations {
-        height: auto
-    }
-
-    body #app section.accommodations-populars .populars .popular-body .card .card-informations h2 {
-        font-size: 14px
-    }
-
-    body #app section.accommodations-populars .populars .popular-body .card .card-informations p {
-        font-size: .8125em
-    }
-
-    body #app section.accommodations-populars .populars .popular-body .card .card-informations .stars i {
-        font-size: .75em
-    }
-
-    body #app section.activity {
-        flex-direction: column;
-        padding: 3em 2.3125em 0;
-        width: auto;
-        row-gap: var(--gap)
-    }
-
-    body #app section.activity .elements-wrapper {
-        display: flex;
-        flex-direction: column;
-        column-gap: var(--gap);
-        width: auto;
-        row-gap: 1em
-    }
-
-    body #app section.activity .elements-wrapper .element {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        overflow: hidden;
-        border-radius: 1em;
-        filter: var(--drop-shadow);
-        background-color: var(--white)
-    }
-
-    body #app section.activity .elements-wrapper .element img {
-        display: flex;
-        object-fit: cover;
-        aspect-ratio: 1/.5;
-        width: 100%
-    }
-
-    body #app section.activity .elements-wrapper .element p {
-        margin: auto 0;
-        padding: 1.25em;
-        font-size: 1em;
-        font-weight: 700
-    }
-
+body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    justify-content: center;
+    font-size: 16px
+}
+
+body #app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: var(--desktop);
+    min-height: 100vh;
+    row-gap: var(--section-padding);
+}
+
+body #app header {
+    display: flex;
+    height: auto;
+    justify-content: space-between
+}
+
+body #app header a.return-to-home {
+    margin: 2.75em 0
+}
+
+body #app header a.return-to-home img {
+    height: 1.3em
+}
+
+body #app header nav {
+    display: flex;
+    height: 100%
+}
+
+body #app header nav ul {
+    display: flex;
+    height: 100%
+}
+
+body #app header nav ul li {
+    display: flex;
+    height: 100%
+}
+
+body #app header nav ul li a.nav-link {
+    position: relative;
+    display: flex;
+    padding: 0 2em;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: 500
+}
+
+body #app header nav ul li a.nav-link:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: .125em;
+    opacity: 0;
+    background-color: var(--tonic)
+}
+
+body #app header nav ul li a.nav-link:hover {
+    color: var(--tonic)
+}
+
+body #app header nav ul li a.nav-link:hover:after {
+    opacity: 1
+}
+
+body #app section {
+    display: flex;
+    width: 100%
+}
+
+body #app section .card {
+    display: flex;
+    border-radius: var(--gap);
+    background-color: var(--white);
+    border-radius: 1em;
+    filter: var(--drop-shadow);
+    border: solid .3125em var(--white);
+    overflow: hidden
+}
+
+body #app section .card img {
+    width: auto;
+    object-fit: cover;
+    aspect-ratio: 1/.5;
+    height: 100%
+}
+
+body #app section .card .card-informations {
+    display: flex;
+    flex-direction: column;
+    margin: .5em 1em;
+    height: 100%
+}
+
+body #app section .card .card-informations p {
+    margin: .75em 0 auto;
+    font-size: .875em
+}
+
+body #app section .card .card-informations .stars {
+    margin-top: 1em
+}
+
+body #app section .card .card-informations .stars i {
+    color: var(--tonic)
+}
+
+body #app section .card .card-informations .stars i:last-child {
+    color: var(--gray)
+}
+
+body #app section.search {
+    flex-direction: column;
+    width: auto;
+}
+
+body #app section.search h1 {
+    font-size: 1.375em;
+}
+
+body #app section.search p {
+    margin-top: .5em;
+}
+
+body #app section.search form {
+    display: flex;
+    margin-top: 1.25em;
+    width: 100%;
+}
+
+body #app section.search form .form-group {
+    display: flex;
+    width: auto;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+body #app section.search form .form-group label {
+    background-color: var(--gray)
+}
+
+body #app section.search form .form-group label i.icon {
+    width: 1em;
+    height: 1em;
+    margin: .875em
+}
+
+body #app section.search form .form-group input {
+    border: none;
+    border-top: solid 1px var(--gray);
+    border-bottom: solid 1px var(--gray);
+    outline: none;
+    padding: 0 1em;
+    font-size: 1em
+}
+
+body #app section.search form .form-group input::placeholder {
+    color: #000;
+    font-weight: 700
+}
+
+body #app section.search form .form-group button {
+    padding: 0 1em;
+    background-color: var(--tonic);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700
+}
+
+body #app section.search form .form-group button i.icon {
+    display: none;
+}
+
+body #app section.search form .form-group button span {
+    display: flex;
+}
+
+body #app section.filters {
+    display: flex;
+    width: 100%;
+    column-gap: 2em;
+    align-items: center;
+}
+
+body #app section.filters .filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2.5em;
+    row-gap: 1em;
+}
+
+body #app section.filters .filters-container .filter {
+    border-radius: 9999px;
+    border: solid 2px var(--gray-border)
+}
+
+body #app section.filters .filters-container .filter label {
+    display: flex;
+    padding: .8125em 1.25em;
+    cursor: pointer;
+    column-gap: .625em;
+    align-items: center;
+    font-weight: 700
+}
+
+body #app section.filters .filters-container .filter label i.icon {
+    color: var(--tonic)
+}
+
+body #app section.filters .filters-container .filter input {
+    position: absolute;
+    display: none;
+    width: 40px;
+    height: 40px
+}
+
+body #app section.filters .filters-container .filter:hover {
+    background-color: var(--tonic-hovered)
+}
+
+body #app section.informations {
+    display: flex;
+    align-items: center;
+    column-gap: .5em;
+    font-size: 1em
+}
+
+body #app section.informations i.icon {
+    display: flex;
+    padding: .5em;
+    border-radius: 9999px;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px var(--gray);
+    aspect-ratio: 1/1;
+    width: .8em;
+    height: .8em;
+    color: var(--tonic)
+}
+
+body #app section.accommodations-populars {
+    display: flex;
+    width: 100%;
+    column-gap: 2em
+}
+
+body #app section.accommodations-populars .accommodations {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5625em 2.3125em;
+    width: auto;
+    max-width: 60%;
+    background-color: var(--gray);
+    border-radius: 1.5em;
+    row-gap: 1.625em
+}
+
+body #app section.accommodations-populars .accommodations .accommodation-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, calc((100% - var(--gap) * 2) / 3));
+    width: auto;
+    row-gap: var(--gap);
+    column-gap: var(--gap)
+}
+
+body #app section.accommodations-populars .accommodations .accommodation-wrapper .card {
+    flex-direction: column
+}
+
+body #app section.accommodations-populars .accommodations a.show-more {
+    margin-top: .875em;
+    font-size: 1.125em;
+    font-weight: 700
+}
+
+body #app section.accommodations-populars .populars {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5625em 2.3125em;
+    width: 40%;
+    background-color: var(--gray);
+    border-radius: 1.5em;
+    row-gap: 1.625em
+}
+
+body #app section.accommodations-populars .populars .popular-head {
+    display: flex;
+    row-gap: 1em;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center
+}
+
+body #app section.accommodations-populars .populars .popular-head a {
+    color: var(--tonic)
+}
+
+body #app section.accommodations-populars .populars .popular-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em
+}
+
+body #app section.accommodations-populars .populars .popular-body .card {
+    flex-direction: row
+}
+
+body #app section.accommodations-populars .populars .popular-body .card img {
+    aspect-ratio: 1/1;
+    height: 8em
+}
+
+body #app section.accommodations-populars .populars .popular-body .card .card-informations {
+    height: auto
+}
+
+body #app section.activity {
+    flex-direction: column;
+    width: 100%;
+    row-gap: var(--gap)
+}
+
+body #app section.activity .elements-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, calc((100% - var(--gap) * 3) / 4));
+    column-gap: var(--gap);
+    width: 100%
+}
+
+body #app section.activity .elements-wrapper .element {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1em;
+    filter: var(--drop-shadow);
+    background-color: var(--white)
+}
+
+body #app section.activity .elements-wrapper .element img {
+    display: flex;
+    object-fit: cover;
+    aspect-ratio: .5/.7;
+    height: auto
+}
+
+body #app section.activity .elements-wrapper .element p {
+    margin: auto 0;
+    padding: 1.25em;
+    font-size: 1em;
+    font-weight: 700
+}
+
+body #app footer {
+    display: grid;
+    margin-top: 2.25em;
+    grid-template-columns: repeat(3, 33.3333333333%);
+    padding: 2.8125em 4.375em;
+    background-color: var(--gray)
+}
+
+@media screen and (max-width: 992px) {
     body #app footer {
         display: flex;
         flex-direction: column;
-        margin-top: 2.25em;
-        padding: 2.8125em 4.375em;
-        background-color: var(--gray);
-        row-gap: 3em
+        align-items: center;
+        row-gap: 1.5em
     }
 
     body #app footer .element {
-        display: flex;
-        flex-direction: column;
-        width: 100%
-    }
-
-    body #app footer .element ul {
-        display: flex;
-        flex-direction: column;
-        margin-top: 1.25em;
-        row-gap: .75em
-    }
-
-    body #app footer .element ul li a {
-        font-size: 1em
+        width: auto
     }
 }
 
+body #app footer .element {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+body #app footer .element ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25em;
+    row-gap: .75em
+}
+
+body #app footer .element ul li a {
+    font-size: 1em
+}
+
+/* Media queries here */
 /* Tablet */
 @media screen and (max-width: 1440px) and (min-width: 1024px)  {
     body {
@@ -905,89 +861,93 @@ i.icon {
     }
 }
 
-/* Desktop */
-@media screen and (min-width: 1440px) {
-    body {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        background-color: #fff;
-        justify-content: center;
-        font-size: 16px
+/* Mobile */
+@media screen and (max-width: 1024px) {
+    :root {
+
     }
-    
+
     body #app {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: var(--desktop);
-        padding: 0 var(--app-padding);
-        min-height: 100vh;
-        row-gap: var(--section-padding)
+        row-gap: var(--section-padding);
     }
-    
+
     body #app header {
         display: flex;
-        height: auto;
-        justify-content: space-between
+        flex-direction: column
     }
-    
+
     body #app header a.return-to-home {
-        margin: 2.75em 0
+        display: flex;
+        margin: 1.3em auto
     }
-    
+
     body #app header a.return-to-home img {
-        height: 1.3em
+        display: flex;
+        height: 1.4em
     }
-    
+
     body #app header nav {
         display: flex;
-        height: 100%
+        height: 4em
     }
-    
+
     body #app header nav ul {
         display: flex;
+        width: 100%;
         height: 100%
     }
-    
+
     body #app header nav ul li {
         display: flex;
+        width: 50%;
         height: 100%
     }
-    
+
     body #app header nav ul li a.nav-link {
         position: relative;
         display: flex;
         padding: 0 2em;
         justify-content: center;
         align-items: center;
+        width: 100%;
         height: 100%;
-        font-weight: 500
+        font-weight: 500;
+        font-size: 1em
     }
-    
+
+    body #app header nav ul li a.nav-link:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: .125em;
+        opacity: 1;
+        background-color: var(--gray)
+    }
+
     body #app header nav ul li a.nav-link:after {
         content: "";
         position: absolute;
-        top: 0;
+        bottom: 0;
         width: 100%;
         height: .125em;
         opacity: 0;
         background-color: var(--tonic)
     }
-    
+
     body #app header nav ul li a.nav-link:hover {
         color: var(--tonic)
     }
-    
+
     body #app header nav ul li a.nav-link:hover:after {
         opacity: 1
     }
-    
+
     body #app section {
         display: flex;
         width: 100%
     }
-    
+
     body #app section .card {
         display: flex;
         border-radius: var(--gap);
@@ -997,86 +957,91 @@ i.icon {
         border: solid .3125em var(--white);
         overflow: hidden
     }
-    
+
     body #app section .card img {
         width: auto;
         object-fit: cover;
         aspect-ratio: 1/.5;
         height: 100%
     }
-    
+
     body #app section .card .card-informations {
         display: flex;
         flex-direction: column;
         margin: .5em 1em;
         height: 100%
     }
-    
+
     body #app section .card .card-informations p {
         margin: .75em 0 auto;
         font-size: .875em
     }
-    
+
     body #app section .card .card-informations .stars {
         margin-top: 1em
     }
-    
+
     body #app section .card .card-informations .stars i {
         color: var(--tonic)
     }
-    
+
     body #app section .card .card-informations .stars i:last-child {
         color: var(--gray)
     }
-    
+
     body #app section.search {
-        flex-direction: column
+        flex-direction: column;
+        padding: 0 1.25em;
     }
-    
+
     body #app section.search h1 {
+        display: flex;
         font-size: 1.375em
     }
-    
+
     body #app section.search p {
         margin-top: .5em
     }
-    
+
     body #app section.search form {
         display: flex;
-        margin-top: 1.25em
+        margin-top: 1.25em;
+        width: 100%;
     }
-    
+
     body #app section.search form .form-group {
         display: flex;
         width: auto;
         border-radius: 1em;
-        overflow: hidden
+        overflow: hidden;
+        width: 100%;
     }
-    
+
     body #app section.search form .form-group label {
         background-color: var(--gray)
     }
-    
+
     body #app section.search form .form-group label i.icon {
         width: 1em;
         height: 1em;
         margin: .875em
     }
-    
+
     body #app section.search form .form-group input {
         border: none;
         border-top: solid 1px var(--gray);
         border-bottom: solid 1px var(--gray);
         outline: none;
         padding: 0 1em;
-        font-size: 1em
+        font-size: 1em;
+        width: 100%;
     }
-    
+
     body #app section.search form .form-group input::placeholder {
         color: #000;
         font-weight: 700
     }
-    
+
     body #app section.search form .form-group button {
         padding: 0 1em;
         background-color: var(--tonic);
@@ -1085,57 +1050,77 @@ i.icon {
         font-size: 1em;
         font-weight: 700
     }
-    
+
+    body #app section.search form .form-group button i.icon {
+        display: flex;
+    }
+
+    body #app section.search form .form-group button span {
+        display: none;
+    }
+
     body #app section.filters {
-        display: flex;
+        flex-direction: column;
+        width: auto;
+        row-gap: 1em;
+        padding: 0 1.5em;
+        justify-content: start;
+    }
+
+    body #app section.filters h2 {
+        font-size: 1.2em;
         width: 100%;
-        column-gap: 2em;
-        align-items: center
     }
-    
+
     body #app section.filters .filters-container {
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 2.5em;
-        row-gap: 1em
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, calc((100% - (var(--gap) + 4px)) / 2));
+        row-gap: calc(var(--gap) / 2);
+        column-gap: calc(var(--gap) / 2);
     }
-    
+
     body #app section.filters .filters-container .filter {
+        display: flex;
         border-radius: 9999px;
-        border: solid 2px var(--gray-border)
+        border: solid 2px var(--gray-border);
+        width: 100%
     }
-    
+
     body #app section.filters .filters-container .filter label {
         display: flex;
         padding: .8125em 1.25em;
         cursor: pointer;
         column-gap: .625em;
         align-items: center;
-        font-weight: 700
+        font-weight: 700;
+        font-size: .8125em
     }
-    
+
     body #app section.filters .filters-container .filter label i.icon {
         color: var(--tonic)
     }
-    
+
     body #app section.filters .filters-container .filter input {
         position: absolute;
         display: none;
         width: 40px;
         height: 40px
     }
-    
+
     body #app section.filters .filters-container .filter:hover {
         background-color: var(--tonic-hovered)
     }
-    
+
     body #app section.informations {
         display: flex;
+        padding: 2em 1.25em 0;
+        width: calc(100% - 2.5em);
         align-items: center;
         column-gap: .5em;
         font-size: 1em
     }
-    
+
     body #app section.informations i.icon {
         display: flex;
         padding: .5em;
@@ -1144,56 +1129,63 @@ i.icon {
         align-items: center;
         border: solid 2px var(--gray);
         aspect-ratio: 1/1;
-        width: .8em;
-        height: .8em;
+        width: .5em;
+        height: .5em;
         color: var(--tonic)
     }
-    
+
     body #app section.accommodations-populars {
         display: flex;
-        width: 100%;
-        column-gap: 2em
+        flex-wrap: wrap-reverse;
+        padding: 2.3125em 0;
+        row-gap: var(--gap);
+        width: 100%
     }
-    
+
     body #app section.accommodations-populars .accommodations {
         display: flex;
         flex-direction: column;
-        padding: 2.5625em 2.3125em;
+        padding: 0 2.3125em;
         width: auto;
-        max-width: 60%;
-        background-color: var(--gray);
         border-radius: 1.5em;
         row-gap: 1.625em
     }
-    
-    body #app section.accommodations-populars .accommodations .accommodation-wrapper {
-        display: grid;
-        grid-template-columns: repeat(3, calc((100% - var(--gap) * 2) / 3));
-        width: auto;
-        row-gap: var(--gap);
-        column-gap: var(--gap)
+
+    body #app section.accommodations-populars .accommodations h1 {
+        font-size: 1.25em
     }
-    
+
+    body #app section.accommodations-populars .accommodations .accommodation-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        row-gap: 1em
+    }
+
     body #app section.accommodations-populars .accommodations .accommodation-wrapper .card {
         flex-direction: column
     }
-    
+
+    body #app section.accommodations-populars .accommodations .accommodation-wrapper .card img {
+        width: 100%;
+        aspect-ratio: 1/.4
+    }
+
     body #app section.accommodations-populars .accommodations a.show-more {
         margin-top: .875em;
         font-size: 1.125em;
         font-weight: 700
     }
-    
+
     body #app section.accommodations-populars .populars {
         display: flex;
         flex-direction: column;
-        padding: 2.5625em 2.3125em;
-        width: 40%;
+        padding: 2.5625em 1.8em;
+        width: 100%;
         background-color: var(--gray);
-        border-radius: 1.5em;
         row-gap: 1.625em
     }
-    
+
     body #app section.accommodations-populars .populars .popular-head {
         display: flex;
         row-gap: 1em;
@@ -1201,101 +1193,106 @@ i.icon {
         justify-content: space-between;
         align-items: center
     }
-    
+
     body #app section.accommodations-populars .populars .popular-head a {
-        color: var(--tonic)
+        color: var(--tonic);
+        font-size: 1.125em
     }
-    
+
     body #app section.accommodations-populars .populars .popular-body {
         display: flex;
         flex-direction: column;
-        row-gap: 2em
+        width: auto;
+        row-gap: 1em
     }
-    
+
     body #app section.accommodations-populars .populars .popular-body .card {
-        flex-direction: row
+        flex-direction: row;
+        border-radius: 1.5em
     }
-    
+
     body #app section.accommodations-populars .populars .popular-body .card img {
-        aspect-ratio: 1/1;
-        height: 8em
+        width: 6em;
+        aspect-ratio: 1/1
     }
-    
+
     body #app section.accommodations-populars .populars .popular-body .card .card-informations {
         height: auto
     }
-    
+
+    body #app section.accommodations-populars .populars .popular-body .card .card-informations h2 {
+        font-size: 14px
+    }
+
+    body #app section.accommodations-populars .populars .popular-body .card .card-informations p {
+        font-size: .8125em
+    }
+
+    body #app section.accommodations-populars .populars .popular-body .card .card-informations .stars i {
+        font-size: .75em
+    }
+
     body #app section.activity {
         flex-direction: column;
-        width: 100%;
+        padding: 3em 2.3125em 0;
+        width: auto;
         row-gap: var(--gap)
     }
-    
+
     body #app section.activity .elements-wrapper {
-        display: grid;
-        grid-template-columns: repeat(4, calc((100% - var(--gap) * 3) / 4));
+        display: flex;
+        flex-direction: column;
         column-gap: var(--gap);
-        width: 100%
+        width: auto;
+        row-gap: 1em
     }
-    
+
     body #app section.activity .elements-wrapper .element {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: auto;
         overflow: hidden;
         border-radius: 1em;
         filter: var(--drop-shadow);
         background-color: var(--white)
     }
-    
+
     body #app section.activity .elements-wrapper .element img {
         display: flex;
         object-fit: cover;
-        aspect-ratio: .5/.7;
-        height: auto
+        aspect-ratio: 1/.5;
+        width: 100%
     }
-    
+
     body #app section.activity .elements-wrapper .element p {
         margin: auto 0;
         padding: 1.25em;
         font-size: 1em;
         font-weight: 700
     }
-    
+
     body #app footer {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         margin-top: 2.25em;
-        grid-template-columns: repeat(3, 33.3333333333%);
         padding: 2.8125em 4.375em;
-        background-color: var(--gray)
+        background-color: var(--gray);
+        row-gap: 3em
     }
-    
-    @media screen and (max-width: 992px) {
-        body #app footer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            row-gap: 1.5em
-        }
-    
-        body #app footer .element {
-            width: auto
-        }
-    }
-    
+
     body #app footer .element {
         display: flex;
         flex-direction: column;
         width: 100%
     }
-    
+
     body #app footer .element ul {
         display: flex;
         flex-direction: column;
         margin-top: 1.25em;
         row-gap: .75em
     }
-    
+
     body #app footer .element ul li a {
         font-size: 1em
     }
