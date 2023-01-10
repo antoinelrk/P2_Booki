@@ -78,30 +78,30 @@ body #app {
 body #app header {
     display: flex;
     height: auto;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 body #app header a.return-to-home {
-    margin: 2.75em 0
+    margin: 2.75em 0;
 }
 
 body #app header a.return-to-home img {
-    height: 1.3em
+    height: 1.3em;
 }
 
 body #app header nav {
     display: flex;
-    height: 100%
+    height: 100%;
 }
 
 body #app header nav ul {
     display: flex;
-    height: 100%
+    height: 100%;
 }
 
 body #app header nav ul li {
     display: flex;
-    height: 100%
+    height: 100%;
 }
 
 body #app header nav ul li a.nav-link {
@@ -115,17 +115,17 @@ body #app header nav ul li a.nav-link {
 }
 
 body #app header nav ul li a.nav-link:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     width: 100%;
     height: .125em;
     opacity: 0;
-    background-color: var(--tonic)
+    background-color: var(--tonic);
 }
 
 body #app header nav ul li a.nav-link:hover {
-    color: var(--tonic)
+    color: var(--tonic);
 }
 
 body #app header nav ul li a.nav-link:hover:after {
@@ -205,7 +205,7 @@ body #app section.search form .form-group {
 }
 
 body #app section.search form .form-group label {
-    background-color: var(--gray)
+    background-color: var(--gray);
 }
 
 body #app section.search form .form-group label i.icon {
@@ -229,9 +229,11 @@ body #app section.search form .form-group input::placeholder {
 }
 
 body #app section.search form .form-group button {
+    display: flex;
     padding: 0 1em;
+    align-items: center;
     background-color: var(--tonic);
-    color: #fff;
+    color: var(--white);
     cursor: pointer;
     font-size: 1em;
     font-weight: 700
@@ -373,7 +375,7 @@ body #app section.accommodations-populars .populars .popular-body .card {
 }
 
 body #app section.accommodations-populars .populars .popular-body .card img {
-    aspect-ratio: 1/1;
+    aspect-ratio: 1 / 1;
     height: 8em;
 }
 
@@ -445,341 +447,66 @@ body #app footer .element ul li a {
 
 /* Media queries here */
 /* Tablet */
-@media screen and (max-width: 1440px) and (min-width: 1024px) {
-    body {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        background-color: #fff;
-        justify-content: center;
-        font-size: 16px
-    }
-
+@media screen and (min-width: 1024px) {
     body #app {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: var(--desktop);
         padding: 0 var(--app-padding);
-        min-height: 100vh;
-        row-gap: var(--section-padding)
-    }
-
-    body #app header {
-        display: flex;
-        height: auto;
-        justify-content: space-between
-    }
-
-    body #app header a.return-to-home {
-        margin: 2.75em 0
-    }
-
-    body #app header a.return-to-home img {
-        height: 1.3em
-    }
-
-    body #app header nav {
-        display: flex;
-        height: 100%
-    }
-
-    body #app header nav ul {
-        display: flex;
-        height: 100%
-    }
-
-    body #app header nav ul li {
-        display: flex;
-        height: 100%
-    }
-
-    body #app header nav ul li a.nav-link {
-        position: relative;
-        display: flex;
-        padding: 0 2em;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        font-weight: 500
-    }
-
-    body #app header nav ul li a.nav-link:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: .125em;
-        opacity: 0;
-        background-color: var(--tonic)
-    }
-
-    body #app header nav ul li a.nav-link:hover {
-        color: var(--tonic)
-    }
-
-    body #app header nav ul li a.nav-link:hover:after {
-        opacity: 1
-    }
-
-    body #app section {
-        display: flex;
-        width: 100%
-    }
-
-    body #app section .card {
-        display: flex;
-        border-radius: var(--gap);
-        background-color: var(--white);
-        border-radius: 1em;
-        filter: var(--drop-shadow);
-        border: solid .3125em var(--white);
-        overflow: hidden
-    }
-
-    body #app section .card img {
-        width: auto;
-        object-fit: cover;
-        aspect-ratio: 1/.5;
-        height: 100%
-    }
-
-    body #app section .card .card-informations {
-        display: flex;
-        flex-direction: column;
-        margin: .5em 1em;
-        height: 100%
-    }
-
-    body #app section .card .card-informations p {
-        margin: .75em 0 auto;
-        font-size: .875em
-    }
-
-    body #app section .card .card-informations .stars {
-        margin-top: 1em
-    }
-
-    body #app section .card .card-informations .stars i {
-        color: var(--tonic)
-    }
-
-    body #app section .card .card-informations .stars i:last-child {
-        color: var(--gray)
-    }
-
-    body #app section.search {
-        flex-direction: column
-    }
-
-    body #app section.search h1 {
-        font-size: 1.375em
-    }
-
-    body #app section.search p {
-        margin-top: .5em
-    }
-
-    body #app section.search form {
-        display: flex;
-        margin-top: 1.25em
-    }
-
-    body #app section.search form .form-group {
-        display: flex;
-        width: auto;
-        border-radius: 1em;
-        overflow: hidden
-    }
-
-    body #app section.search form .form-group label {
-        background-color: var(--gray)
-    }
-
-    body #app section.search form .form-group label i.icon {
-        width: 1em;
-        height: 1em;
-        margin: .875em
-    }
-
-    body #app section.search form .form-group input {
-        border: none;
-        border-top: solid 1px var(--gray);
-        border-bottom: solid 1px var(--gray);
-        outline: none;
-        padding: 0 1em;
-        font-size: 1em
-    }
-
-    body #app section.search form .form-group input::placeholder {
-        color: #000;
-        font-weight: 700
-    }
-
-    body #app section.search form .form-group button {
-        padding: 0 1em;
-        background-color: var(--tonic);
-        color: #fff;
-        cursor: pointer;
-        font-size: 1em;
-        font-weight: 700
-    }
-
-    body #app section.search form .form-group button {
-        display: none;
-    }
-
-    body #app section.filters {
-        display: flex;
-        width: 100%;
-        column-gap: 2em;
-        align-items: center
+        row-gap: var(--section-padding);
     }
 
     body #app section.filters .filters-container {
-        display: flex;
-        flex-wrap: wrap;
         column-gap: 1.375em;
-        row-gap: 1em
-    }
-
-    body #app section.filters .filters-container .filter {
-        border-radius: 9999px;
-        border: solid 2px var(--gray-border)
-    }
-
-    body #app section.filters .filters-container .filter label {
-        display: flex;
-        padding: .8125em 1.25em;
-        cursor: pointer;
-        column-gap: .625em;
-        align-items: center;
-        font-weight: 700
-    }
-
-    body #app section.filters .filters-container .filter label i.icon {
-        color: var(--tonic)
-    }
-
-    body #app section.filters .filters-container .filter input {
-        position: absolute;
-        display: none;
-        width: 40px;
-        height: 40px
-    }
-
-    body #app section.filters .filters-container .filter:hover {
-        background-color: var(--tonic-hovered)
-    }
-
-    body #app section.informations {
-        display: flex;
-        align-items: center;
-        column-gap: .5em;
-        font-size: 1em
     }
 
     body #app section.informations i.icon {
-        display: flex;
-        padding: .5em;
-        border-radius: 9999px;
-        justify-content: center;
-        align-items: center;
-        border: solid 2px var(--gray);
-        aspect-ratio: 1/1;
-        width: .8em;
-        height: .8em;
-        color: var(--tonic)
+        font-size: .8em;
     }
 
     body #app section.accommodations-populars {
-        display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         row-gap: var(--gap);
-        width: 100%
     }
 
     body #app section.accommodations-populars .accommodations {
-        display: flex;
-        flex-direction: column;
-        padding: 2.5625em 2.3125em;
-        width: auto;
+        width: 100%;
+        max-width: revert;
         background-color: var(--gray);
         border-radius: 1.5em;
         row-gap: 1.625em
-    }
-
-    body #app section.accommodations-populars .accommodations .accommodation-wrapper {
-        display: grid;
-        grid-template-columns: repeat(3, calc((100% - var(--gap) * 2) / 3));
-        width: auto;
-        row-gap: var(--gap);
-        column-gap: var(--gap)
-    }
-
-    body #app section.accommodations-populars .accommodations .accommodation-wrapper .card {
-        flex-direction: column
-    }
-
-    body #app section.accommodations-populars .accommodations a.show-more {
-        margin-top: .875em;
-        font-size: 1.125em;
-        font-weight: 700
     }
 
     body #app section.accommodations-populars .populars {
-        display: flex;
-        flex-direction: column;
-        padding: 2.5625em 2.3125em;
         width: 100%;
-        background-color: var(--gray);
-        border-radius: 1.5em;
-        row-gap: 1.625em
-    }
-
-    body #app section.accommodations-populars .populars .popular-head {
-        display: flex;
-        row-gap: 1em;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center
     }
 
     body #app section.accommodations-populars .populars .popular-head a {
-        color: var(--tonic);
-        font-size: 1.125em
+        font-size: 1.125em;
     }
 
     body #app section.accommodations-populars .populars .popular-body {
         display: grid;
         grid-template-columns: repeat(3, calc((100% - var(--gap) * 2) / 3));
         width: auto;
-        column-gap: var(--gap)
+        column-gap: var(--gap);
     }
 
     body #app section.accommodations-populars .populars .popular-body .card {
-        flex-direction: row;
-        border-radius: 1.5em
+        border-radius: 1.5em;
     }
 
     body #app section.accommodations-populars .populars .popular-body .card img {
-        width: 6em
-    }
-
-    body #app section.accommodations-populars .populars .popular-body .card .card-informations {
-        height: auto
+        width: 6em;
     }
 
     body #app section.accommodations-populars .populars .popular-body .card .card-informations h2 {
-        font-size: 14px
+        font-size: 14px;
     }
 
     body #app section.accommodations-populars .populars .popular-body .card .card-informations p {
-        font-size: .8125em
+        font-size: .8125em;
     }
 
     body #app section.accommodations-populars .populars .popular-body .card .card-informations .stars i {
-        font-size: .75em
+        font-size: .75em;
     }
 
     body #app section.activity {
@@ -858,74 +585,50 @@ body #app footer .element ul li a {
 
     body #app header {
         display: flex;
-        flex-direction: column
+        flex-direction: column;
     }
 
     body #app header a.return-to-home {
         display: flex;
-        margin: 1.3em auto
+        margin: 1.3em auto;
     }
 
     body #app header a.return-to-home img {
         display: flex;
-        height: 1.4em
+        height: 1.4em;
     }
 
     body #app header nav {
-        display: flex;
-        height: 4em
+        height: 4em;
     }
 
     body #app header nav ul {
-        display: flex;
         width: 100%;
-        height: 100%
     }
 
     body #app header nav ul li {
-        display: flex;
         width: 50%;
-        height: 100%
     }
 
     body #app header nav ul li a.nav-link {
         position: relative;
-        display: flex;
-        padding: 0 2em;
-        justify-content: center;
-        align-items: center;
         width: 100%;
-        height: 100%;
-        font-weight: 500;
-        font-size: 1em
+        font-size: 1em;
     }
 
     body #app header nav ul li a.nav-link:before {
-        content: "";
+        content: '';
         position: absolute;
         bottom: 0;
         width: 100%;
         height: .125em;
         opacity: 1;
-        background-color: var(--gray)
+        background-color: var(--gray);
     }
 
     body #app header nav ul li a.nav-link:after {
-        content: "";
-        position: absolute;
+        top: revert;
         bottom: 0;
-        width: 100%;
-        height: .125em;
-        opacity: 0;
-        background-color: var(--tonic)
-    }
-
-    body #app header nav ul li a.nav-link:hover {
-        color: var(--tonic)
-    }
-
-    body #app header nav ul li a.nav-link:hover:after {
-        opacity: 1
     }
 
     body #app section {
@@ -1153,7 +856,7 @@ body #app footer .element ul li a {
     }
 
     body #app section.activity {
-        padding: 2.5em 1.25em;
+        padding: 2.5em 1.25em 0 1.25em;
         width: auto;
     }
 
