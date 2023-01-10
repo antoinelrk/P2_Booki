@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Raleway, sans-serif
 }
 
@@ -259,8 +260,10 @@ body #app section.filters .filters-container {
 }
 
 body #app section.filters .filters-container .filter {
+    display: flex;
     border-radius: 9999px;
-    border: solid 2px var(--gray-border)
+    overflow: hidden;
+    border: solid 2px var(--gray-border);
 }
 
 body #app section.filters .filters-container .filter label {
@@ -269,18 +272,16 @@ body #app section.filters .filters-container .filter label {
     cursor: pointer;
     column-gap: .625em;
     align-items: center;
+    width: 100%;
     font-weight: 700
 }
 
 body #app section.filters .filters-container .filter label i.icon {
-    color: var(--tonic)
+    color: var(--tonic);
 }
 
 body #app section.filters .filters-container .filter input {
-    position: absolute;
     display: none;
-    width: 40px;
-    height: 40px
 }
 
 body #app section.filters .filters-container .filter:hover {
@@ -296,21 +297,18 @@ body #app section.informations {
 
 body #app section.informations i.icon {
     display: flex;
-    padding: .5em;
+    color: var(--tonic);
+    font-size: 1em;
+    width: 2em;
+    height: 2em;
     border-radius: 9999px;
-    justify-content: center;
-    align-items: center;
     border: solid 2px var(--gray);
-    aspect-ratio: 1/1;
-    width: .8em;
-    height: .8em;
-    color: var(--tonic)
 }
 
 body #app section.accommodations-populars {
     display: flex;
     width: 100%;
-    column-gap: 2em
+    column-gap: var(--gap);
 }
 
 body #app section.accommodations-populars .accommodations {
@@ -339,7 +337,7 @@ body #app section.accommodations-populars .accommodations .accommodation-wrapper
 body #app section.accommodations-populars .accommodations a.show-more {
     margin-top: .875em;
     font-size: 1.125em;
-    font-weight: 700
+    font-weight: 700;
 }
 
 body #app section.accommodations-populars .populars {
@@ -349,7 +347,7 @@ body #app section.accommodations-populars .populars {
     width: 40%;
     background-color: var(--gray);
     border-radius: 1.5em;
-    row-gap: 1.625em
+    row-gap: 1.625em;
 }
 
 body #app section.accommodations-populars .populars .popular-head {
@@ -361,32 +359,32 @@ body #app section.accommodations-populars .populars .popular-head {
 }
 
 body #app section.accommodations-populars .populars .popular-head a {
-    color: var(--tonic)
+    color: var(--tonic);
 }
 
 body #app section.accommodations-populars .populars .popular-body {
     display: flex;
     flex-direction: column;
-    row-gap: 2em
+    row-gap: 2em;
 }
 
 body #app section.accommodations-populars .populars .popular-body .card {
-    flex-direction: row
+    flex-direction: row;
 }
 
 body #app section.accommodations-populars .populars .popular-body .card img {
     aspect-ratio: 1/1;
-    height: 8em
+    height: 8em;
 }
 
 body #app section.accommodations-populars .populars .popular-body .card .card-informations {
-    height: auto
+    height: auto;
 }
 
 body #app section.activity {
     flex-direction: column;
     width: 100%;
-    row-gap: var(--gap)
+    row-gap: var(--gap);
 }
 
 body #app section.activity .elements-wrapper {
@@ -409,8 +407,8 @@ body #app section.activity .elements-wrapper .element {
 body #app section.activity .elements-wrapper .element img {
     display: flex;
     object-fit: cover;
-    aspect-ratio: .5/.7;
-    height: auto
+    aspect-ratio: .5 / .7;
+    height: auto;
 }
 
 body #app section.activity .elements-wrapper .element p {
@@ -423,28 +421,15 @@ body #app section.activity .elements-wrapper .element p {
 body #app footer {
     display: grid;
     margin-top: 2.25em;
-    grid-template-columns: repeat(3, 33.3333333333%);
+    grid-template-columns: repeat(3, calc(100% / 3));
     padding: 2.8125em 4.375em;
     background-color: var(--gray)
-}
-
-@media screen and (max-width: 992px) {
-    body #app footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 1.5em
-    }
-
-    body #app footer .element {
-        width: auto
-    }
 }
 
 body #app footer .element {
     display: flex;
     flex-direction: column;
-    width: 100%
+    width: 100%;
 }
 
 body #app footer .element ul {
@@ -460,7 +445,7 @@ body #app footer .element ul li a {
 
 /* Media queries here */
 /* Tablet */
-@media screen and (max-width: 1440px) and (min-width: 1024px)  {
+@media screen and (max-width: 1440px) and (min-width: 1024px) {
     body {
         display: flex;
         width: 100%;
@@ -864,7 +849,7 @@ body #app footer .element ul li a {
 /* Mobile */
 @media screen and (max-width: 1024px) {
     :root {
-
+        --drop-shadow: drop-shadow(0 3px 6px #00000022);
     }
 
     body #app {
@@ -1048,7 +1033,7 @@ body #app footer .element ul li a {
         color: #fff;
         cursor: pointer;
         font-size: 1em;
-        font-weight: 700
+        font-weight: 700;
     }
 
     body #app section.search form .form-group button i.icon {
@@ -1064,7 +1049,6 @@ body #app footer .element ul li a {
         width: auto;
         row-gap: 1em;
         padding: 0 1.5em;
-        justify-content: start;
     }
 
     body #app section.filters h2 {
@@ -1075,123 +1059,67 @@ body #app footer .element ul li a {
     body #app section.filters .filters-container {
         display: grid;
         width: 100%;
-        grid-template-columns: repeat(2, calc((100% - (var(--gap) + 4px)) / 2));
+        grid-template-columns: repeat(2, calc((100% - var(--gap) / 2) / 2));
         row-gap: calc(var(--gap) / 2);
         column-gap: calc(var(--gap) / 2);
     }
 
+
     body #app section.filters .filters-container .filter {
-        display: flex;
-        border-radius: 9999px;
-        border: solid 2px var(--gray-border);
-        width: 100%
+        width: 100%;
+        height: 100%;
     }
 
     body #app section.filters .filters-container .filter label {
-        display: flex;
-        padding: .8125em 1.25em;
-        cursor: pointer;
-        column-gap: .625em;
-        align-items: center;
-        font-weight: 700;
-        font-size: .8125em
-    }
-
-    body #app section.filters .filters-container .filter label i.icon {
-        color: var(--tonic)
-    }
-
-    body #app section.filters .filters-container .filter input {
-        position: absolute;
-        display: none;
-        width: 40px;
-        height: 40px
-    }
-
-    body #app section.filters .filters-container .filter:hover {
-        background-color: var(--tonic-hovered)
+        font-size: .8125em;
     }
 
     body #app section.informations {
-        display: flex;
-        padding: 2em 1.25em 0;
-        width: calc(100% - 2.5em);
-        align-items: center;
-        column-gap: .5em;
-        font-size: 1em
+        padding: 0 1.25em;
+        width: 100%;
     }
 
     body #app section.informations i.icon {
-        display: flex;
-        padding: .5em;
-        border-radius: 9999px;
-        justify-content: center;
-        align-items: center;
-        border: solid 2px var(--gray);
-        aspect-ratio: 1/1;
-        width: .5em;
-        height: .5em;
-        color: var(--tonic)
+        font-size: .8em;
     }
 
     body #app section.accommodations-populars {
-        display: flex;
         flex-wrap: wrap-reverse;
-        padding: 2.3125em 0;
         row-gap: var(--gap);
         width: 100%
     }
 
     body #app section.accommodations-populars .accommodations {
-        display: flex;
-        flex-direction: column;
-        padding: 0 2.3125em;
         width: auto;
-        border-radius: 1.5em;
-        row-gap: 1.625em
+        padding: 0 1.25em;
+        background-color: var(--white);
+        border-radius: 0;
+        width: 100%;
+        max-width: revert;
     }
 
     body #app section.accommodations-populars .accommodations h1 {
-        font-size: 1.25em
+        font-size: 1.25em;
     }
 
     body #app section.accommodations-populars .accommodations .accommodation-wrapper {
         display: flex;
         flex-direction: column;
-        width: auto;
-        row-gap: 1em
-    }
-
-    body #app section.accommodations-populars .accommodations .accommodation-wrapper .card {
-        flex-direction: column
+        row-gap: calc(var(--gap) / 2);
     }
 
     body #app section.accommodations-populars .accommodations .accommodation-wrapper .card img {
         width: 100%;
-        aspect-ratio: 1/.4
+        aspect-ratio: 1 / .4;
     }
 
     body #app section.accommodations-populars .accommodations a.show-more {
-        margin-top: .875em;
-        font-size: 1.125em;
-        font-weight: 700
+        display: none;
     }
 
     body #app section.accommodations-populars .populars {
-        display: flex;
-        flex-direction: column;
-        padding: 2.5625em 1.8em;
         width: 100%;
-        background-color: var(--gray);
-        row-gap: 1.625em
-    }
-
-    body #app section.accommodations-populars .populars .popular-head {
-        display: flex;
-        row-gap: 1em;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center
+        border-radius: 0;
     }
 
     body #app section.accommodations-populars .populars .popular-head a {
@@ -1200,32 +1128,24 @@ body #app footer .element ul li a {
     }
 
     body #app section.accommodations-populars .populars .popular-body {
-        display: flex;
-        flex-direction: column;
         width: auto;
         row-gap: 1em
     }
 
     body #app section.accommodations-populars .populars .popular-body .card {
-        flex-direction: row;
-        border-radius: 1.5em
+        border-radius: 1.5em;
     }
 
     body #app section.accommodations-populars .populars .popular-body .card img {
         width: 6em;
-        aspect-ratio: 1/1
-    }
-
-    body #app section.accommodations-populars .populars .popular-body .card .card-informations {
-        height: auto
     }
 
     body #app section.accommodations-populars .populars .popular-body .card .card-informations h2 {
-        font-size: 14px
+        font-size: .875em;
     }
 
     body #app section.accommodations-populars .populars .popular-body .card .card-informations p {
-        font-size: .8125em
+        font-size: .8125em;
     }
 
     body #app section.accommodations-populars .populars .popular-body .card .card-informations .stars i {
@@ -1233,67 +1153,30 @@ body #app footer .element ul li a {
     }
 
     body #app section.activity {
-        flex-direction: column;
-        padding: 3em 2.3125em 0;
+        padding: 2.5em 1.25em;
         width: auto;
-        row-gap: var(--gap)
     }
 
     body #app section.activity .elements-wrapper {
         display: flex;
         flex-direction: column;
-        column-gap: var(--gap);
         width: auto;
-        row-gap: 1em
+        row-gap: 2em;
     }
 
     body #app section.activity .elements-wrapper .element {
-        display: flex;
-        flex-direction: column;
         width: auto;
-        overflow: hidden;
-        border-radius: 1em;
-        filter: var(--drop-shadow);
-        background-color: var(--white)
     }
 
     body #app section.activity .elements-wrapper .element img {
-        display: flex;
-        object-fit: cover;
-        aspect-ratio: 1/.5;
-        width: 100%
-    }
-
-    body #app section.activity .elements-wrapper .element p {
-        margin: auto 0;
-        padding: 1.25em;
-        font-size: 1em;
-        font-weight: 700
+        aspect-ratio: 1 / .5;
+        width: 100%;
     }
 
     body #app footer {
         display: flex;
         flex-direction: column;
-        margin-top: 2.25em;
-        padding: 2.8125em 4.375em;
         background-color: var(--gray);
-        row-gap: 3em
-    }
-
-    body #app footer .element {
-        display: flex;
-        flex-direction: column;
-        width: 100%
-    }
-
-    body #app footer .element ul {
-        display: flex;
-        flex-direction: column;
-        margin-top: 1.25em;
-        row-gap: .75em
-    }
-
-    body #app footer .element ul li a {
-        font-size: 1em
+        row-gap: 3em;
     }
 }
