@@ -155,7 +155,7 @@ body #app section .card img {
     width: auto;
     object-fit: cover;
     aspect-ratio: 1/.5;
-    height: 100%
+    height: auto
 }
 
 body #app section .card .card-informations {
