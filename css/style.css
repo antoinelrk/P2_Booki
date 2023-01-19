@@ -187,10 +187,6 @@ body #app section.search {
     width: auto;
 }
 
-body #app section.search h1 {
-    font-size: 1.375em;
-}
-
 body #app section.search p {
     margin-top: .5em;
 }
