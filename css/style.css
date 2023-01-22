@@ -38,7 +38,7 @@ img {
     --drop-shadow: drop-shadow(6px 6px 12px #00000022);
     --app-padding: 3.4375em;
     --section-padding: 2em;
-    --desktop: 1440px;
+    --desktop: 1400px;
     --tablet: 992px;
     --mobile: 840px
 }
@@ -74,6 +74,7 @@ body #app {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin: 0 var(--app-padding);
     max-width: var(--desktop);
     min-height: 100vh;
     row-gap: var(--section-padding);
@@ -141,7 +142,7 @@ body #app section {
     width: 100%
 }
 
-body #app section .card {
+body #app section article.card {
     display: flex;
     border-radius: var(--gap);
     background-color: var(--white);
@@ -151,34 +152,34 @@ body #app section .card {
     overflow: hidden
 }
 
-body #app section .card img {
+body #app section article.card img {
     width: auto;
     object-fit: cover;
     aspect-ratio: 1/.5;
     height: auto
 }
 
-body #app section .card .card-informations {
+body #app section article.card .card-informations {
     display: flex;
     flex-direction: column;
     margin: .5em 1em;
     height: 100%
 }
 
-body #app section .card .card-informations p {
+body #app section article.card .card-informations p {
     margin: .75em 0 auto;
     font-size: .875em
 }
 
-body #app section .card .card-informations .stars {
+body #app section article.card .card-informations .stars {
     margin-top: 1em
 }
 
-body #app section .card .card-informations .stars i {
+body #app section article.card .card-informations .stars i {
     color: var(--tonic)
 }
 
-body #app section .card .card-informations .stars i:last-child {
+body #app section article.card .card-informations .stars i:last-child {
     color: var(--gray)
 }
 
@@ -447,9 +448,10 @@ body #app footer .element ul li a {
 
 /* Media queries here */
 /* Tablet */
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
     body #app {
         padding: 0 var(--app-padding);
+        margin: 0;
         row-gap: var(--section-padding);
     }
 
@@ -473,6 +475,9 @@ body #app footer .element ul li a {
         border-radius: 1.5em;
         row-gap: 1.625em
     }
+    body #app section.accommodations-populars .accommodations .accommodation-wrapper article.card .card-informations .stars i {
+        font-size: .75em;
+    }
 
     body #app section.accommodations-populars .populars {
         width: 100%;
@@ -489,23 +494,24 @@ body #app footer .element ul li a {
         column-gap: var(--gap);
     }
 
-    body #app section.accommodations-populars .populars .popular-body .card {
+    body #app section.accommodations-populars .populars .popular-body article.card {
         border-radius: 1.5em;
     }
 
-    body #app section.accommodations-populars .populars .popular-body .card img {
+    body #app section.accommodations-populars .populars .popular-body article.card img {
         width: 6em;
+        height: 100%;
     }
 
-    body #app section.accommodations-populars .populars .popular-body .card .card-informations h2 {
-        font-size: 14px;
+    body #app section.accommodations-populars .populars .popular-body article.card .card-informations h2 {
+        font-size: .875em;
     }
 
-    body #app section.accommodations-populars .populars .popular-body .card .card-informations p {
+    body #app section.accommodations-populars .populars .popular-body article.card .card-informations p {
         font-size: .8125em;
     }
 
-    body #app section.accommodations-populars .populars .popular-body .card .card-informations .stars i {
+    body #app section.accommodations-populars .populars .popular-body article.card .card-informations .stars i {
         font-size: .75em;
     }
 
@@ -523,7 +529,7 @@ body #app footer .element ul li a {
         width: 100%
     }
 
-    body #app section.activity .elements-wrapper .element {
+    body #app section.activity .elements-wrapper article.element {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -533,14 +539,14 @@ body #app footer .element ul li a {
         background-color: var(--white)
     }
 
-    body #app section.activity .elements-wrapper .element img {
+    body #app section.activity .elements-wrapper article.element img {
         display: flex;
         object-fit: cover;
         aspect-ratio: .6/.7;
         height: auto
     }
 
-    body #app section.activity .elements-wrapper .element p {
+    body #app section.activity .elements-wrapper article.element p {
         margin: auto 0;
         padding: 1.25em;
         font-size: 1em;
@@ -574,13 +580,14 @@ body #app footer .element ul li a {
 }
 
 /* Mobile */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 767px) {
     :root {
         --drop-shadow: drop-shadow(0 3px 6px #00000022);
     }
 
     body #app {
         row-gap: var(--section-padding);
+        margin: 0;
     }
 
     body #app header {
@@ -636,7 +643,7 @@ body #app footer .element ul li a {
         width: 100%
     }
 
-    body #app section .card {
+    body #app section article.card {
         display: flex;
         border-radius: var(--gap);
         background-color: var(--white);
@@ -646,34 +653,34 @@ body #app footer .element ul li a {
         overflow: hidden
     }
 
-    body #app section .card img {
+    body #app section article.card img {
         width: auto;
         object-fit: cover;
         aspect-ratio: 1/.5;
         height: 100%
     }
 
-    body #app section .card .card-informations {
+    body #app section article.card .card-informations {
         display: flex;
         flex-direction: column;
         margin: .5em 1em;
         height: 100%
     }
 
-    body #app section .card .card-informations p {
+    body #app section article.card .card-informations p {
         margin: .75em 0 auto;
         font-size: .875em
     }
 
-    body #app section .card .card-informations .stars {
+    body #app section article.card .card-informations .stars {
         margin-top: 1em
     }
 
-    body #app section .card .card-informations .stars i {
+    body #app section article.card .card-informations .stars i {
         color: var(--tonic)
     }
 
-    body #app section .card .card-informations .stars i:last-child {
+    body #app section article.card .card-informations .stars i:last-child {
         color: var(--gray)
     }
 
@@ -811,7 +818,7 @@ body #app footer .element ul li a {
         row-gap: calc(var(--gap) / 2);
     }
 
-    body #app section.accommodations-populars .accommodations .accommodation-wrapper .card img {
+    body #app section.accommodations-populars .accommodations .accommodation-wrapper article.card img {
         width: 100%;
         aspect-ratio: 1 / .4;
     }
@@ -823,6 +830,7 @@ body #app footer .element ul li a {
     body #app section.accommodations-populars .populars {
         width: 100%;
         border-radius: 0;
+        padding: 2.5625em 1.25em;
     }
 
     body #app section.accommodations-populars .populars .popular-head a {
@@ -835,23 +843,23 @@ body #app footer .element ul li a {
         row-gap: 1em
     }
 
-    body #app section.accommodations-populars .populars .popular-body .card {
+    body #app section.accommodations-populars .populars .popular-body article.card {
         border-radius: 1.5em;
     }
 
-    body #app section.accommodations-populars .populars .popular-body .card img {
+    body #app section.accommodations-populars .populars .popular-body article.card img {
         width: 6em;
     }
 
-    body #app section.accommodations-populars .populars .popular-body .card .card-informations h2 {
+    body #app section.accommodations-populars .populars .popular-body article.card .card-informations h2 {
         font-size: .875em;
     }
 
-    body #app section.accommodations-populars .populars .popular-body .card .card-informations p {
+    body #app section.accommodations-populars .populars .popular-body article.card .card-informations p {
         font-size: .8125em;
     }
 
-    body #app section.accommodations-populars .populars .popular-body .card .card-informations .stars i {
+    body #app section.accommodations-populars .populars .popular-body article.card .card-informations .stars i {
         font-size: .75em
     }
 
@@ -867,17 +875,18 @@ body #app footer .element ul li a {
         row-gap: 2em;
     }
 
-    body #app section.activity .elements-wrapper .element {
+    body #app section.activity .elements-wrapper article.element {
         width: auto;
     }
 
-    body #app section.activity .elements-wrapper .element img {
+    body #app section.activity .elements-wrapper article.element img {
         aspect-ratio: 1 / .5;
         width: 100%;
     }
 
     body #app footer {
         display: flex;
+        padding: 2.8125em 1.25em;
         flex-direction: column;
         background-color: var(--gray);
         row-gap: 3em;
