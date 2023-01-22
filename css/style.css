@@ -333,7 +333,7 @@ body #app section.accommodations-populars .accommodations .accommodation-wrapper
     column-gap: var(--gap)
 }
 
-body #app section.accommodations-populars .accommodations .accommodation-wrapper .card {
+body #app section.accommodations-populars .accommodations .accommodation-wrapper article.card {
     flex-direction: column
 }
 
@@ -371,16 +371,16 @@ body #app section.accommodations-populars .populars .popular-body {
     row-gap: 2em;
 }
 
-body #app section.accommodations-populars .populars .popular-body .card {
+body #app section.accommodations-populars .populars .popular-body article.card {
     flex-direction: row;
 }
 
-body #app section.accommodations-populars .populars .popular-body .card img {
+body #app section.accommodations-populars .populars .popular-body article.card img {
     aspect-ratio: 1 / 1;
     height: 8em;
 }
 
-body #app section.accommodations-populars .populars .popular-body .card .card-informations {
+body #app section.accommodations-populars .populars .popular-body article.card .card-informations {
     height: auto;
 }
 
@@ -397,7 +397,7 @@ body #app section.activity .elements-wrapper {
     width: 100%
 }
 
-body #app section.activity .elements-wrapper .element {
+body #app section.activity .elements-wrapper article.element {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -407,14 +407,14 @@ body #app section.activity .elements-wrapper .element {
     background-color: var(--white)
 }
 
-body #app section.activity .elements-wrapper .element img {
+body #app section.activity .elements-wrapper article.element img {
     display: flex;
     object-fit: cover;
     aspect-ratio: .5 / .7;
     height: auto;
 }
 
-body #app section.activity .elements-wrapper .element p {
+body #app section.activity .elements-wrapper article.element p {
     margin: auto 0;
     padding: 1.25em;
     font-size: 1em;
